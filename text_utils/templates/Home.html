@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DB text utils</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><strong>TEXT UTILS </strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/about">About us</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> 
+    <!-- alert-->
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Hello user!</strong> this is dev bhatt the creater of this website I hope this website is usefull for you! have a nice day :)
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <!-- main container -->
+    <div class = "container">
+      <form action="http://127.0.0.1:8000/analyse" method="GET"> {% csrf_token %} 
+      <!-- text area -->
+      <br>
+      <h1><strong> Enter your text in text area below! </strong> </h1>
+      <textarea class="form-control" placeholder="text area!!" id="floatingTextarea" style="height: 228px;" name = 'text'></textarea>
+      <label for="floatingTextarea"> </label>
+      <!-- switchs -->
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" name = 'charcount' role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">charcount</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" name = 'removespace' role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">removespace</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" name = 'invert_text' role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">invert text</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" name = 'capitalize' role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">capitalize</label>
+      </div>
+      <!-- submit button -->
+      <div class="d-grid gap-2 col-2 mx-auto">
+       <button type="submit" class="btn btn-dark">Submit</button>
+      </div>
+    </form>
+    </div>
+
+  </body>
+</html>
